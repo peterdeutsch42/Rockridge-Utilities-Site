@@ -17,7 +17,14 @@ This is a test site
 </tr>
 </table>
 <p>PHP dohicky</p>
-Still Testing!
+<?php
+$con = mysql_connect("localhost","root","deutsch9");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+mysql_select_db("rrutil", $con);
+?>
 </div>
 </body>
 </html>
