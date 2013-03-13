@@ -18,12 +18,11 @@ This is a test site
 </table>
 <p>PHP dohicky</p>
 <?php
-$con = mysql_connect("127.0.0.1","remote","remotepass");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-mysql_select_db("rrutil", $con);
+mysql_connect('localhost','rrutilworker','password');
+mysql_select_db("rrutil");
+$result = mysql_query("SELECT * FROM blockrotation");
+$row = mysql_fetch_array($result);
+echo $row['Rotation'];
 ?>
 </div>
 </body>
