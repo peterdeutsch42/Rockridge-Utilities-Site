@@ -18,11 +18,16 @@ This is a test site
 </table>
 <p>PHP dohicky</p>
 <?php
-mysql_connect('localhost','rrutilworker','password');
+mysql_connect('localhost','root','');
 mysql_select_db("rrutil");
-$result = mysql_query("SELECT * FROM blockrotation");
+$date = date("Y-m-d");
+echo $date;
+$result = mysql_query("SELECT * FROM `blockrotation` WHERE `Date` = '$date'");
 $row = mysql_fetch_array($result);
 echo $row['Rotation'];
+$xblock = $row['xblock'];
+echo $xblock;
+
 ?>
 </div>
 </body>
