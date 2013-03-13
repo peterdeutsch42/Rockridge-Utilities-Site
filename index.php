@@ -1,11 +1,23 @@
 <html>
 <head>
+<style>
+body {background-image:url('images/bg.jpg');}
+img
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+opacity: 0.5;
+}
+</style>
 <title>Rockridge Utilities Pre-Alpha</title>
 </head>
 <body>
 <p align="center">
 This is a test site
 </p>
+<img src="images/rockridge.png" />
 <div align="center">
 <p>PHP dohicky</p>
 <?php
