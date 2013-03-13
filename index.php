@@ -18,7 +18,7 @@ This is a test site
 </table>
 <p>PHP dohicky</p>
 <?php
-$con = mysql_connect("localhost","root","deutsch9");
+$con = mysql_connect("localhost","remote","remotepass");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
