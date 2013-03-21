@@ -1,26 +1,14 @@
 <html>
 <head>
-<style>
-body {background-image:url('images/bg.jpg');}
-img
-{
-position:absolute;
-left:0px;
-top:0px;
-z-index:-1;
-opacity: 0.5;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 <title>Rockridge Utilities Pre-Alpha</title>
 </head>
 <body>
-<p align="center">
-This is a test site
-</p>
 <img src="images/rockridge.png" />
 <div align="center">
-<p>PHP dohicky</p>
+<b><h1>IMPORTANT NOTICE:</h1><h3>Passwords are not being hashed at this time, and thus can be intercepted. Please do not use your regular password at this time</h3></b>
 <?php
+session_start();
 mysql_connect('localhost','root','');
 mysql_select_db("rrutil");
 $date = date("Y-m-d");
@@ -29,6 +17,10 @@ $result = mysql_query("SELECT * FROM `blockrotation` WHERE `Date` = '$date'");
 $row = mysql_fetch_array($result);
 echo "<br />";
 $day = $row['Day'];
+if (empty($day)) {
+echo "There is no school today";
+}
+else {
 echo "Day $day";
 echo "<br />";
 echo $row['Rotation'];
@@ -42,8 +34,22 @@ if ($xblock = '0')
 	{
 	echo "There is X-Block today";
 	}
+}
+echo "<br />";
+$email = $_SESSION['email'];
+if (empty($email)) {
+echo "You are not logged in. <a href='login.php'>Login</a> or <a href='register.php'>Register</a>";
+}
+else {
+echo "Welcome back $email !";
+echo "<br />";
+echo "<a href='logout.php'>Logout</a>";
 
+}
 ?>
+<br />
+
+
 </div>
 </body>
 </html>
