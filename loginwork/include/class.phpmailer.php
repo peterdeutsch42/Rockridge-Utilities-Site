@@ -205,13 +205,13 @@ class PHPMailer {
    * Sets SMTP username.
    * @var string
    */
-  var $Username     = '';
+  var $Username     = 'root';
 
   /**
    * Sets SMTP password.
    * @var string
    */
-  var $Password     = '';
+  var $Password     = 'root';
 
   /**
    * Sets the SMTP server timeout in seconds. This function will not
@@ -224,7 +224,7 @@ class PHPMailer {
    * Sets SMTP class debugging on or off.
    * @var bool
    */
-  var $SMTPDebug    = false;
+  var $SMTPDebug    = true;
 
   /**
    * Prevents the SMTP connection from being closed after each mail
