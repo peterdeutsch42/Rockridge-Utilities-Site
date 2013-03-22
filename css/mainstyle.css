@@ -7,3 +7,12 @@ top:0px;
 z-index:-1;
 opacity: 0.5;
 }
+table{
+    border: 1px solid black;
+}
+th, td {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 150px;
+	text-align:center;
+}

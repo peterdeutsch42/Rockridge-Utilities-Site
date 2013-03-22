@@ -54,6 +54,6 @@ echo "Hello " . $_SESSION['email'] . "!";
 ?>
 <html>
 <body>
-<meta http-equiv="REFRESH" content="0;url=index.php"></HEAD>
+<meta http-equiv="REFRESH" content="0;url=index.php">
 </body>
 </html>

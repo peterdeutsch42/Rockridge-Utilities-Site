@@ -44,6 +44,7 @@ VALUES ('$Grade', '$FullName', '$Password', '$Email')"))
 {
 die("We could not register you due to a mysql error (Contact the website owner if this continues to happen.)");
 }
-echo "Thank you, you have now registered.";
+echo "Thank you, you have now registered. You may now log in.";
 
 ?>
+<meta http-equiv="REFRESH" content="3;url=index.php">
