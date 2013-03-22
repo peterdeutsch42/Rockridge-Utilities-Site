@@ -4,12 +4,13 @@
 </head>
 <body>
 <img src="images/rockridge.png" />
+<div align="center">
 <h1>Update your Block Rotation</h1>
 <form action="processaddblockrotation.php" method="POST">
 Day: <input type="radio" name="day" value="1">1<input type="radio" name="day" value="2">2
-<br />
+<br /><br />
 Block: <input type="radio" name="block" value="1">1<input type="radio" name="block" value="2">2<input type="radio" name="block" value="3">3<input type="radio" name="block" value="4">4
-Type: <select name="classtype">
+<br /><br />Type: <select name="classtype">
 <option>FINE ARTS 8</option>
 <option>APPLIED SKILLS 8</option>
 <option>JUNIOR CONCERT BAND 8</option>
@@ -143,7 +144,107 @@ Type: <select name="classtype">
 <option>ACADEMIC TUTORIAL</option>
 <option>SPARE</option>
 </select>
+<br />
+With:
+<select name="teacher">
+<option>Adie, N</option>
+<option>Alldred, L</option>
+<option>Anderson, A</option>
+<option>Anderson, G</option>
+<option>Anderson, S</option>
+<option>Armstrong, I</option>
+<option>Battilana, M</option>
+<option>Benederio, E</option>
+<option>Berg, C</option>
+<option>Bourgh, K</option>
+<option>Branco, M</option>
+<option>Brown, I</option>
+<option>Byrne, W</option>
+<option>Candelaria, J</option>
+<option>Chen, E</option>
+<option>Chung, S</option>
+<option>Cho, L</option>
+<option>Coleman, S</option>
+<option>Conner, D</option>
+<option>Coulthard, C</option>
+<option>Craig, J</option>
+<option>Crowley, J</option>
+<option>Dickinson, D</option>
+<option>Domes, D</option>
+<option>Elliott, G</option>
+<option>Farr, K</option>
+<option>Foster, A</option>
+<option>Gallardo, G</option>
+<option>Gilbert, P</option>
+<option>Green, A</option>
+<option>Hansen, T</option>
+<option>Haramincic, K</option>
+<option>Harding, T</option>
+<option>Harrison, L</option>
+<option>Henning, D</option>
+<option>Huntingford, N</option>
+<option>Ingham, E</option>
+<option>Jansen, S</option>
+<option>Johnson, J</option>
+<option>Johnstone, B</option>
+<option>Jones, C</option>
+<option>Kehagias, M</option>
+<option>Kim, K</option>
+<option>Kozdrowski, P</option>
+<option>Kump, A</option>
+<option>Lam, D</option>
+<option>Lamb, F</option>
+<option>Lambie, D</option>
+<option>Laursoo, J</option>
+<option>Lawson, S</option>
+<option>LeGresley, H</option>
+<option>MacAulay, P</option>
+<option>MacDonald, J</option>
+<option>Maquignaz, S</option>
+<option>McDowell, K</option>
+<option>Meikle, D</option>
+<option>Montgomery, B</option>
+<option>Moore, B</option>
+<option>Munro, B</option>
+<option>Neacs, C</option>
+<option>Nilsson, A</option>
+<option>Olson, J</option>
+<option>Parackal, M</option>
+<option>Passant, M</option>
+<option>Pedersen, C</option>
+<option>Plunkett, L</option>
+<option>Rai, B</option>
+<option>Rinfret, D</option>
+<option>Sandor, C</option>
+<option>Sawers, A</option>
+<option>Searcy, C</option>
+<option>Selzer, J</option>
+<option>Shannon, D</option>
+<option>Sherratt, A</option>
+<option>Smith, T</option>
+<option>Smithers, ML</option>
+<option>Spearman, K</option>
+<option>Sponza, E</option>
+<option>Struthers, L</option>
+<option>Taguchi, T</option>
+<option>Taylor, B</option>
+<option>Thompson, J</option>
+<option>Thureau, A</option>
+<option>Towers, J</option>
+<option>Trask, M</option>
+<option>Van Der Lee, H</option>
+<option>Vasquez, T</option>
+<option>Waatainen, P</option>
+<option>Ward, L</option>
+<option>White, A</option>
+<option>Williams, T</option>
+<option>Wood,M</option>
+<option>Young, T</option>
+<option>Zambon, P</option>
+<option>Zurkovic, T</option>
+</select>
 <input type="submit" />
 </form>
+</div>
 </body>
 </html>

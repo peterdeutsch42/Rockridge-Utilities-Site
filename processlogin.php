@@ -1,10 +1,17 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<title>Rockridge Utilities Pre-Alpha</title>
+</head>
+<body>
 <?php
 session_start();
 mysql_connect('localhost','root','');
 mysql_select_db("rrutil");
 
 $Email = $_POST['email'];
-$Pass = $_POST['password'];
+$Passprehash = $_POST['password'];
+$Pass = hash('sha1', $Passprehash);
 $Query = mysql_query("SELECT * FROM userinfo WHERE email='$Email' AND password='$Pass'");
 $NumRows = mysql_num_rows($Query);
 $_SESSION['email'] = $Email;
@@ -42,6 +49,10 @@ $Database_Pass = $Row['password'];
 }
 else
 {
+unset ($_SESSION['email']);
+unset ($_SESSION['password']);
+unset ($Pass);
+unset ($Email);
 die("Incorrect Username or Password!");
 }
 
@@ -54,6 +65,6 @@ echo "Hello " . $_SESSION['email'] . "!";
 ?>
 <html>
 <body>
-<meta http-equiv="REFRESH" content="0;url=index.php">
+
 </body>
 </html>
