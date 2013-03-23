@@ -17,7 +17,24 @@
 $(document).ready(function() {
 	$(".various").fancybox({
 		maxWidth	: 800,
-		maxHeight	: 200,
+		maxHeight	: 250,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		afterClose : function() {
+        location.reload();
+        return;
+    }
+	});
+});
+$(document).ready(function() {
+	$(".bigger").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 350,
 		fitToView	: false,
 		width		: '70%',
 		height		: '70%',
@@ -119,7 +136,7 @@ else {
 echo "<b>Your Block Rotation Today:</b>";
 echo "<br /><br />";
 echo "Day $day";
-echo $block;
+echo "<br />";
 $chars = preg_split('//', $block, -1, PREG_SPLIT_NO_EMPTY);
 if ($day == '1')
 {
@@ -138,8 +155,8 @@ if (@$xblock == '1')
 	echo "There is no X-Block today";
 	}
 echo "<br /><a class='various fancybox.iframe' href='addblockrotation.php'>Add Blocks</a><br />";
+echo "<a class='bigger fancybox.iframe' href='email.php'>Email</a><br />";
 echo "<a href='logout.php'>Logout</a>";
-echo "<br /><a href='email.php'>Email</a>";
 }
 }
 ?>

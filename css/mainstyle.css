@@ -16,3 +16,7 @@ th, td {
     width: 150px;
 	text-align:center;
 }
+textarea {
+width: 600px;
+height: 40px;
+}
