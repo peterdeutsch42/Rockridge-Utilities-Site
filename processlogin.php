@@ -59,7 +59,10 @@ die("Incorrect Username or Password!");
 if($Email == $Database_Email && $Pass == $Database_Pass)
 {
 // If The User Makes It Here Then That Means He Logged In Successfully
-echo "Hello " . $_SESSION['email'] . "!";
+echo "<div align='center' style='top:50%;'><h3 align='center'>Hello</h3>";
+echo "<h1 align='center'>";
+echo $_SESSION['email'];
+echo "</h1></div>";
 }
 
 ?>

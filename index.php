@@ -1,3 +1,5 @@
+<?php header('Content-type: text/html; charset=utf-8'); ?>
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
@@ -15,7 +17,7 @@
 $(document).ready(function() {
 	$(".various").fancybox({
 		maxWidth	: 800,
-		maxHeight	: 600,
+		maxHeight	: 200,
 		fitToView	: false,
 		width		: '70%',
 		height		: '70%',
@@ -32,7 +34,7 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<img src="images/rockridge.png" />
+<img src="images/rockridge.png" alt="Rockridge Logo" />
 <div align="center">
 <?php
 session_start();
@@ -72,6 +74,7 @@ else {
 $blockrotations = mysql_query("SELECT * FROM `userinfo` WHERE `email` = '$email'");
 $blockrotationsrow = mysql_fetch_array($blockrotations);
 $name = $blockrotationsrow['fullname'];
+$_SESSION['fullname'] = $name;
 echo "Welcome back $name!";
 echo "<br />";
 
@@ -136,6 +139,7 @@ if (@$xblock == '1')
 	}
 echo "<br /><a class='various fancybox.iframe' href='addblockrotation.php'>Add Blocks</a><br />";
 echo "<a href='logout.php'>Logout</a>";
+echo "<br /><a href='email.php'>Email</a>";
 }
 }
 ?>

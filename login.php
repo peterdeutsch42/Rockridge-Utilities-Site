@@ -4,10 +4,13 @@
 <title>Rockridge Utilities Pre-Alpha</title>
 </head>
 <body>
+<div align="center">
+<h1>Login</h1>
 <form action="processlogin.php" method="POST" />
-Email: <input type="text" name="email" /></br>
-Password: <input type="password" name="password" /></br>
+<label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="email"/></br>
+<label>Password: </label><input type="password" name="password"/></br><br />
 <input type="submit" />
 </form>
+</div>
 </body>
 </html>
