@@ -12,7 +12,7 @@ table{
 th, td {
     border: 1px solid black;
     overflow: hidden;
-    width: 135px;
+    width: 100px;
 	text-align:center;
 	background: rgba(255,255,255,.5);
 }
@@ -32,11 +32,12 @@ width: 100%;
 }
 #leftfloat {
 padding-top:100px;
-padding-left:11%;
+padding-left:6%;
 z-index: 1;
 position: relative;
 float: left; 
 text-align:center;
+border: solid 1px red;
 min-width:30%;
 }
 #rightfloat {
@@ -46,6 +47,7 @@ z-index: 1;
 position: relative;
 float: right; 
 text-align:center;
+border: solid 1px red;
 min-width:45%;
 
 }

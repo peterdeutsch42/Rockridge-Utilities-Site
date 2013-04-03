@@ -3,7 +3,6 @@
 <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 </head>
 <body>
-<img src="images/rockridge.png" />
 <div align="center">
 <h1>Update your Block Rotation</h1>
 <form action="processaddblockrotation.php" method="POST">

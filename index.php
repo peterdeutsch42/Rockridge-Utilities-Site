@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<link rel="stylesheet" media='screen and (max-width: 1300px)' type="text/css" href="css/fullscreenmainstyle.css">
+<link rel="stylesheet" media='screen and (min-width: 1300px)' type="text/css" href="css/mainstyle.css">
 <title>Rockridge Utilities Pre-Alpha</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -51,8 +52,15 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<img src="images/rockridge.png" alt="Rockridge Logo" />
-<div align="center">
+<div style="position:relative;">
+<img id="book" src="images/book.png" alt="Textbook" />
+<div id="leftfloat">
+<img id="crest" src="images/crest.gif" />
+<h3>Proceed to the</h3>
+<a href="http://www.sd45.bc.ca/rockridge">
+<h1>Rockridge Homepage</h1></a>
+</div>
+<div id="rightfloat">
 <?php
 session_start();
 mysql_connect('localhost','root','');
@@ -140,12 +148,27 @@ echo "<br />";
 $chars = preg_split('//', $block, -1, PREG_SPLIT_NO_EMPTY);
 if ($day == '1')
 {
+if ($block == '1234'){
 echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block11</td><td>$block12</td><td>$block13</td><td>$block14</td></tr></table>";
+}
+if ($block == '2314'){
+echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block12</td><td>$block13</td><td>$block11</td><td>$block14</td></tr></table>";
+}
+if ($block == '3124'){
+echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block13</td><td>$block11</td><td>$block12</td><td>$block14</td></tr></table>";
+}
 }
 else
 {
+if ($block == '1234'){
 echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block21</td><td>$block22</td><td>$block23</td><td>$block24</td></tr></table>";
 }
+if ($block == '2314'){
+echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block22</td><td>$block23</td><td>$block21</td><td>$block24</td></tr></table>";
+}
+if ($block == '3124'){
+echo "<table border='1'><tr><td>$chars[0]</td><td>$chars[1]</td><td>$chars[2]</td><td>$chars[3]</td></tr><tr><td>$block23</td><td>$block21</td><td>$block22</td><td>$block24</td></tr></table>";
+}}
 if (@$xblock == '1')
 	{
 	echo "There is X-Block today";
@@ -164,5 +187,9 @@ echo "<a href='logout.php'>Logout</a>";
 
 
 </div>
+<!--
+<div id="leftfloat">
+<img id="logo" src="images/rockridge.png" alt="Rockridge Logo" />
+</div>-->
 </body>
 </html>
