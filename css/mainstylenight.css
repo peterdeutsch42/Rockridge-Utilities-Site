@@ -1,0 +1,109 @@
+body {
+background-image:url('../images/bg.jpg');
+overflow:hidden;
+background-size: cover;
+font-family: 'Droid Serif', serif;
+}
+#logo
+{
+z-index:3;
+}
+table{
+    border: 1px solid black;
+	margin: auto;
+}
+th, td {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 135px;
+	text-align:center;
+	background: rgba(255,255,255,.5);
+}
+textarea {
+width: 600px;
+height: 40px;
+}
+/*#book
+{
+position : absolute;
+z-index:0;
+display: block;
+margin:0px auto;
+padding: 0;
+margin: 0;
+width: 100%;
+}
+#leftfloat {
+padding-top:100px;
+padding-left:11%;
+z-index: 1;
+position: relative;
+float: left; 
+text-align:center;
+min-width:30%;
+}
+#rightfloat {
+padding-top:100px;
+padding-right:6%;
+z-index: 1;
+position: relative;
+float: right; 
+text-align:center;
+min-width:45%;
+
+}*/
+#crest
+{
+width: 75px;
+}
+.divtab
+{
+border-radius: 15px;
+width: 150px;
+height: 125px;
+margin-right: 5px;
+float:right;
+}
+#redirect{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#logout{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#login{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#email{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#addblocks{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#container{
+position:relative;
+height:100%;
+}
+#menucontainer{
+position:absolute;
+bottom:-60px;
+right:0px;
+}
+
+#welcome
+{text-align: right;
+position:relative;
+text-shadow: 2px 2px #000000;}
+#noschool
+{text-align: center;
+font-size: 4em;
+text-shadow: 2px 2px #000000;}
+
+
+body{
+color:white;
+}

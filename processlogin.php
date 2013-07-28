@@ -37,7 +37,6 @@ die("Please enter a password!");
 echo "</br>";
 }
 
-//STEP 4 Check Username And Password With The MySQL Database
 
 if($NumRows != 0)
 {
@@ -58,11 +57,12 @@ die("Incorrect Username or Password!");
 
 if($Email == $Database_Email && $Pass == $Database_Pass)
 {
-// If The User Makes It Here Then That Means He Logged In Successfully
 echo "<div align='center' style='top:50%;'><h3 align='center'>Hello</h3>";
 echo "<h1 align='center'>";
 echo $_SESSION['email'];
 echo "</h1></div>";
+echo "<script>function redirect(){window.top.location.href = '/Rockridge-Utilities-Site/index.php';}</script>";
+echo "<script> setTimeout('redirect();', 3000)</script>";
 }
 
 ?>

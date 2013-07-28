@@ -1,6 +1,20 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<script>
+function getStylesheet() {
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 16) {
+       document.write("<link rel='stylesheet' href='css/mainstyle.css' type='text/css'>");
+      }
+
+      if (16 <= currentTime&&currentTime <= 24) {
+       document.write("<link rel='stylesheet' href='css/mainstylenight.css' type='text/css'>");
+      }
+
+}
+
+getStylesheet();
+</script>
 <title>Rockridge Utilities Pre-Alpha</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>

@@ -1,9 +1,22 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<script>
+function getStylesheet() {
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 16) {
+       document.write("<link rel='stylesheet' href='css/mainstyle.css' type='text/css'>");
+      }
+
+      if (16 <= currentTime&&currentTime <= 24) {
+       document.write("<link rel='stylesheet' href='css/mainstylenight.css' type='text/css'>");
+      }
+
+}
+
+getStylesheet();
+</script>
 </head>
 <body>
-<img src="images/rockridge.png" />
 <div align="center">
 <h1>Register</h1>
 <form action="processregistration.php" method="POST">

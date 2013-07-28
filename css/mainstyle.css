@@ -1,6 +1,9 @@
 body {
-background-image:url('../images/bg.jpg');
-overflow:hidden;}
+background-image:url('../images/bgold.jpg');
+overflow:hidden;
+background-size: cover;
+font-family: 'Droid Serif', serif;
+}
 #logo
 {
 z-index:3;
@@ -20,7 +23,7 @@ textarea {
 width: 600px;
 height: 40px;
 }
-#book
+/*#book
 {
 position : absolute;
 z-index:0;
@@ -48,4 +51,55 @@ float: right;
 text-align:center;
 min-width:45%;
 
+}*/
+#crest
+{
+width: 75px;
 }
+.divtab
+{
+border-radius: 15px;
+width: 150px;
+height: 125px;
+margin-right: 5px;
+float:right;
+}
+#redirect{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#logout{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#login{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#email{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#addblocks{
+background-color:rgba(255,255,255,0.5);
+text-align:center;
+}
+#container{
+position:relative;
+height:100%;
+}
+#menucontainer{
+position:absolute;
+bottom:-60px;
+right:0px;
+}
+
+#welcome
+{text-align: right;
+position:relative;
+text-shadow: 2px 2px #000000;}
+#noschool
+{text-align: center;
+font-size: 4em;
+text-shadow: 2px 2px #000000;}
+
